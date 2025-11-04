@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Search } from "lucide-react";
+import { Menu, Search, BellRing, User } from "lucide-react";
 
 interface HeaderProps {
   searchTerm: string;
@@ -22,10 +22,24 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, onSearchChange }) => {
             <input
               type="text"
               placeholder="Search anything..."
-              className="bg-transparent border-none outline-none text-sm w-32 lg:w-48"
+              className="bg-transparent border-none outline-none text-sm w-32 lg:w-96"
               value={searchTerm}
               onChange={(e) => onSearchChange(e.target.value)}
             />
+          </div>
+          <button
+            aria-label="Notifications"
+            className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            <BellRing size={18} className="text-gray-700" />
+          </button>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+              <User size={18} className="text-gray-600" />
+            </div>
+            <span className="text-sm text-gray-700 font-medium hidden sm:inline">
+              Amit Chaurasia
+            </span>
           </div>
         </div>
       </div>

@@ -69,7 +69,22 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        {dashboardData.categories.map((category) => (
+        {(searchTerm.trim() === ""
+          ? dashboardData.categories
+          : dashboardData.categories
+              .map((category) => ({
+                ...category,
+                widgets: category.widgets.filter((widget) => {
+                  const q = searchTerm.toLowerCase();
+                  const nameMatch = widget.name.toLowerCase().includes(q);
+                  const textMatch = widget.text
+                    ? widget.text.toLowerCase().includes(q)
+                    : false;
+                  return nameMatch || textMatch;
+                }),
+              }))
+              .filter((category) => category.widgets.length > 0)
+        ).map((category) => (
           <CategorySection
             key={category.id}
             category={category}
