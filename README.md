@@ -17,19 +17,25 @@ If you have the project in a Git repository, run the following commands:
 ```bash
 git clone https://github.com/amitkumarpc7/accuknoxDashboard.git
 cd accuknoxdashboard
+```
 
 
 ### **Step 2: Install Dependencies**
 
 Install all required dependencies using npm:
-
+```bash
 npm install
+```
 
 ### **Step 3: Start the Development Server**
 
+```bash
 The project uses Vite, run:
 npm run dev
+```
+ ### Live Deployed link
 
+ https://amit-accuknox-dashboard.netlify.app/
 
 ## ⚙️ Tech Stack
 
