@@ -23,13 +23,11 @@ cd accuknoxdashboard
 
 Install all required dependencies using npm:
 
-```bash
 npm install
 
 ### **Step 3: Start the Development Server**
 
 The project uses Vite, run:
-```bash
 npm run dev
 
 
@@ -42,5 +40,3 @@ npm run dev
 | **UI Icons** | Lucide React |
 | **Charts & Graphs** | Recharts |
 | **Build Tool** | Vite / Create React App |
-
-
