@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { X, Search, Plus } from "lucide-react";
+import { X, Search } from "lucide-react";
 import type { Widget } from "../types/dashboard";
 import { allAvailableWidgets } from "../data/mockData";
 
@@ -14,7 +14,7 @@ interface AddWidgetDrawerProps {
 
 const AddWidgetDrawer: React.FC<AddWidgetDrawerProps> = ({
   isOpen,
-  selectedCategory,
+  // selectedCategory,
   selectedWidgets,
   onClose,
   onConfirm,
